@@ -1,0 +1,87 @@
+.banner {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 8px solid var(--foreground);
+  background-color: var(--primary);
+  /* Usa a cor de texto específica para o fundo primary (que muda no alto contraste) */
+  color: var(--primary-foreground, var(--foreground));
+
+  padding: 1.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .banner {
+    padding: 2rem 0;
+  }
+}
+
+.bgIcon {
+  position: absolute;
+  right: -1.5rem;
+  top: -1.5rem;
+  width: 10rem;
+  height: 10rem;
+  opacity: 0.15;
+  pointer-events: none;
+  /* Garante que o ícone de fundo acompanhe a cor do texto do tema */
+  color: var(--primary-foreground, var(--foreground));
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  /* Garante a cor de contraste */
+  color: var(--primary-foreground, var(--foreground));
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin: 0;
+  /* Garante a cor de contraste */
+  color: var(--primary-foreground, var(--foreground));
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3.75rem;
+  }
+}
+
+.text {
+  margin-top: 0.5rem;
+  max-width: 48rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.4;
+  /* Garante a cor de contraste */
+  color: var(--primary-foreground, var(--foreground));
+}
+
+@media (min-width: 768px) {
+  .text {
+    font-size: 1.25rem;
+  }
+}

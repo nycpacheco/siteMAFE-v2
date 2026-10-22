@@ -1,0 +1,339 @@
+.homeGrid {
+  margin: 0 auto;
+  display: grid;
+  width: 100%;
+  max-width: 80rem;
+  gap: 1.5rem;
+  padding: 1.25rem 0.75rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .homeGrid {
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .homeGrid {
+    grid-template-columns: minmax(0, 2.15fr) minmax(0, 1fr);
+    gap: 1.25rem;
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+.momentsSection {
+  min-width: 0;
+  border-radius: 0.125rem;
+  border: 3px solid var(--border);
+  background-color: var(--card);
+  padding: 0.75rem;
+  box-shadow: 4px 4px 0 var(--border);
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .momentsSection {
+    padding: 1.25rem;
+  }
+}
+
+.sectionHeader {
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.headerTitleWrapper {
+  min-width: 0;
+}
+
+.eyebrowText {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .eyebrowText {
+    font-size: 1.125rem;
+  }
+}
+
+.sectionHeading {
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0;
+  font-family: var(--font-display);
+}
+
+@media (min-width: 640px) {
+  .sectionHeading {
+    font-size: 1.5rem;
+  }
+}
+
+.carouselViewport {
+  overflow: hidden;
+  border-radius: 0.125rem;
+  border: 2px solid var(--border);
+}
+
+.carouselContainer {
+  display: flex;
+  touch-action: pan-y;
+}
+
+.momentSlide {
+  flex: 0 0 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.momentImage {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 2px solid var(--border);
+  box-shadow: 4px 4px 0 var(--border);
+  box-sizing: border-box;
+}
+
+.momentCaption {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--foreground);
+}
+
+@media (min-width: 640px) {
+  .momentCaption {
+    min-height: 6rem;
+    font-size: 1.25rem;
+  }
+}
+
+.carouselControls {
+  margin: 1rem auto 0 auto;
+  display: grid;
+  min-height: 3.5rem;
+  max-width: 36rem;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 0.375rem;
+  border: 2px solid var(--border);
+  background-color: var(--card);
+  padding: 0.25rem;
+  box-shadow: 4px 4px 0 var(--border);
+  box-sizing: border-box;
+}
+
+.dotsContainer {
+  display: flex;
+  min-width: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.dotBtn {
+  height: 2.75rem;
+  width: 2.75rem;
+  min-width: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.375rem;
+}
+
+.dotBtn:focus-visible {
+  outline: 4px solid var(--ring);
+}
+
+.dotIndicator {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  border: 3px solid var(--foreground);
+  box-sizing: border-box;
+}
+
+.dotActive {
+  background-color: var(--foreground);
+}
+
+.dotInactive {
+  background-color: var(--card);
+}
+
+.sideCol {
+  display: grid;
+  min-width: 0;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1280px) {
+  .sideCol {
+    grid-template-rows: auto 1fr;
+  }
+}
+
+.contactCard {
+  border-radius: 0.5rem;
+  border: 3px solid var(--border);
+  background-color: var(--card);
+  padding: 1.5rem;
+  box-shadow: 4px 4px 0 var(--border);
+  box-sizing: border-box;
+}
+
+.contactTitle {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: var(--font-display);
+}
+
+.contactList {
+  display: grid;
+  gap: 0.5rem;
+  font-style: normal;
+}
+
+.contactLink {
+  display: grid;
+  min-height: 3.5rem;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.15s ease;
+}
+
+.contactLink:hover {
+  background-color: var(--secondary);
+}
+
+.contactLink:focus-visible {
+  outline: 4px solid var(--ring);
+}
+
+.contactIcon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.contactInfo {
+  min-width: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.contactSub {
+  display: block;
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+}
+
+.contactMain {
+  display: block;
+  word-break: break-words;
+}
+
+.supportersCard {
+  min-width: 0;
+  border-radius: 0.5rem;
+  border: 3px solid var(--border);
+  background-color: var(--supporters-bg);           /* <--- Usa a nova variável dedicada */
+  color: var(--supporters-foreground);              /* <--- Usa a cor de texto correspondente */
+  padding: 1rem;
+  box-shadow: 4px 4px 0 var(--border);
+  box-sizing: border-box;
+}
+
+.supportersTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: inherit;
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+.supportersViewport {
+  overflow: hidden;
+  border-radius: 0.375rem;
+  border: 2px solid var(--border);
+  background-color: var(--card);
+  color: var(--card-foreground, var(--foreground));
+}
+
+.supporterSlide {
+  display: grid;
+  min-width: 0;
+  flex: 0 0 100%;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.supporterLogoBox {
+  display: grid;
+  aspect-ratio: 1 / 1;
+  place-content: center;
+  border-radius: 0.375rem;
+  border: 1px solid var(--border);
+  background-color: var(--card);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.supporterHeartIcon {
+  margin: 0 auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--action);
+}
+
+.supporterLogoText {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.supporterContent {
+  min-width: 0;
+}
+
+.supporterName {
+  word-break: break-words;
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+.dialogHeart {
+  width: 4rem;
+  height: 4rem;
+  color: var(--primary);
+}
