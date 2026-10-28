@@ -1,0 +1,19 @@
+{
+  "contactStatus": {
+    "whatsapp": "(11) 99873-2849",
+    "email": "mafe@gmail.com",
+    "facebook": "mafegrupo"
+  },
+  "aboutContent": {
+    "since": "2019",
+    "city": "Mairiporã-SP",
+    "program": "Escola da Família",
+    "participants": "cerca de 60 pessoas entre 45 e 75 anos"
+  },
+  "homeContent": {
+    "footerPhone": "(11) 90243-9028",
+    "whatsappUrl": "https://wa.me/5511998732849",
+    "facebookUrl": "https://www.facebook.com/mafegrupo",
+    "caption": "teste para ver se dá para enxergar as informações presentes além disso para testar se ele se adapta sozinho a parte branca"
+  }
+}

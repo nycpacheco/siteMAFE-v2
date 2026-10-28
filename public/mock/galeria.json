@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Alegria em quadra",
+    "description": "Registro ilustrativo de um treino regular, com integração, movimento e apoio entre participantes.",
+    "date": "2026",
+    "year": "2026",
+    "eventType": "Treinos",
+    "mediaType": "Foto",
+    "image": "mafe-treino-grupo.jpg",
+    "width": 1600,
+    "height": 1008
+  },
+  {
+    "id": 2,
+    "title": "Cada saque é uma conquista",
+    "description": "Registro ilustrativo da prática adaptada, respeitando o ritmo e a experiência de cada pessoa.",
+    "date": "2026",
+    "year": "2026",
+    "eventType": "Treinos",
+    "mediaType": "Foto",
+    "image": "mafe-treino-saque.jpg",
+    "width": 1200,
+    "height": 912
+  },
+  {
+    "id": 3,
+    "title": "Amizade que fortalece",
+    "description": "Registro ilustrativo da convivência e do sentimento de pertencimento construídos pelo esporte.",
+    "date": "2026",
+    "year": "2026",
+    "eventType": "Competições",
+    "mediaType": "Foto",
+    "image": "mafe-retrato-equipe.jpg",
+    "width": 1200,
+    "height": 912
+  },
+  {
+    "id": 4,
+    "title": "Preparação com cuidado",
+    "description": "Registro ilustrativo do alongamento orientado que antecede as atividades em quadra.",
+    "date": "2026",
+    "year": "2026",
+    "eventType": "Treinos",
+    "mediaType": "Foto",
+    "image": "mafe-alongamento.jpg",
+    "width": 1200,
+    "height": 912
+  }
+]
