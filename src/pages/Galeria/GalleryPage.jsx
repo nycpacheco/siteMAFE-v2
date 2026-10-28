@@ -23,12 +23,27 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/Select/Select";
-import { galleryItems } from "@/lib/site-content";
+import { useSiteContent } from "@/hooks/useSiteContent";
 import styles from "./GalleryPage.module.css";
 
 export function GalleryPage() {
+  const { galleryItems } = useSiteContent();
   const [year, setYear] = useState("Todos");
   const [eventType, setEventType] = useState("Todos");
+
+  const availableYears = useMemo(
+    () =>
+      Array.from(new Set(galleryItems.map((item) => item.year))).filter(Boolean),
+    [galleryItems],
+  );
+
+  const availableTypes = useMemo(
+    () =>
+      Array.from(new Set(galleryItems.map((item) => item.eventType))).filter(
+        Boolean,
+      ),
+    [galleryItems],
+  );
 
   const filtered = useMemo(
     () =>
@@ -37,7 +52,7 @@ export function GalleryPage() {
           (year === "Todos" || item.year === year) &&
           (eventType === "Todos" || item.eventType === eventType),
       ),
-    [year, eventType],
+    [galleryItems, year, eventType],
   );
 
   return (
@@ -75,7 +90,11 @@ export function GalleryPage() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="Todos">Todos os anos</SelectItem>
-                    <SelectItem value="2026">2026</SelectItem>
+                    {availableYears.map((yr) => (
+                      <SelectItem key={yr} value={yr}>
+                        {yr}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
               </label>
@@ -91,8 +110,11 @@ export function GalleryPage() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="Todos">Todos os tipos</SelectItem>
-                    <SelectItem value="Treinos">Treinos</SelectItem>
-                    <SelectItem value="Competições">Competições</SelectItem>
+                    {availableTypes.map((type) => (
+                      <SelectItem key={type} value={type}>
+                        {type}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
               </label>

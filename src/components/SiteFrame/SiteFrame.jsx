@@ -13,7 +13,7 @@ import {
   X,
 } from "lucide-react";
 import { Button } from "@/components/ui/Button/Button";
-import { contactStatus, homeContent } from "@/lib/site-content";
+import { useSiteContent } from "@/hooks/useSiteContent";
 import brandLogo from "@/assets/brandLogo.jpeg";
 import styles from "./SiteFrame.module.css";
 
@@ -25,6 +25,8 @@ const navItems = [
 ];
 
 export function SiteFrame({ children }) {
+  
+  const { contactStatus, homeContent } = useSiteContent();
   const [highContrast, setHighContrast] = useState(false);
   const [dark, setDark] = useState(false);
   const [ready, setReady] = useState(false);

@@ -18,21 +18,22 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/Dialog/Dialog";
-import { aboutContent, homeContent } from "@/lib/site-content";
+import { useSiteContent } from "@/hooks/useSiteContent";
 import styles from "./AboutPage.module.css";
 
-const facts = [
-  {
-    icon: CalendarHeart,
-    value: `Desde ${aboutContent.since}`,
-    label: "em quadra",
-  },
-  { icon: Users, value: "~60 pessoas", label: "de 45 a 75 anos" },
-  { icon: Trophy, value: "Torneios", label: "e competições" },
-];
-
 export function AboutPage() {
+  const { aboutContent, homeContent } = useSiteContent();
   const [participateOpen, setParticipateOpen] = useState(false);
+
+  const facts = [
+    {
+      icon: CalendarHeart,
+      value: `Desde ${aboutContent.since}`,
+      label: "em quadra",
+    },
+    { icon: Users, value: "~60 pessoas", label: "de 45 a 75 anos" },
+    { icon: Trophy, value: "Torneios", label: "e competições" },
+  ];
 
   return (
     <>

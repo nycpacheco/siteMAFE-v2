@@ -10,10 +10,11 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/Dialog/Dialog";
-import { homeContent, supporters } from "@/lib/site-content";
+import { useSiteContent } from "@/hooks/useSiteContent";
 import styles from "./SupportersPage.module.css";
 
 export function SupportersPage() {
+  const { homeContent, supporters } = useSiteContent();
   const [coordinationOpen, setCoordinationOpen] = useState(false);
 
   return (

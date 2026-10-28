@@ -1,5 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import fs from "node:fs/promises";
+import path from "node:path";
 
 test("gallery filter logic matches expectations", () => {
   const dummyItems = [
@@ -36,4 +38,28 @@ test("supporters array generator produces valid count and items", () => {
   assert.equal(list[0].id, 1);
   assert.equal(list[9].id, 10);
   assert.equal(list[0].name, "Marcela Amaral");
+});
+
+test("mock JSON files for /galeria, /apoiadores and /institucional have valid structure", async () => {
+  const [galeriaRaw, apoiadoresRaw, instRaw] = await Promise.all([
+    fs.readFile(path.resolve("public/mock/galeria.json"), "utf-8"),
+    fs.readFile(path.resolve("public/mock/apoiadores.json"), "utf-8"),
+    fs.readFile(path.resolve("public/mock/institucional.json"), "utf-8"),
+  ]);
+
+  const galeria = JSON.parse(galeriaRaw);
+  const apoiadores = JSON.parse(apoiadoresRaw);
+  const institucional = JSON.parse(instRaw);
+
+  assert.equal(Array.isArray(galeria), true);
+  assert.equal(galeria.length, 4);
+  assert.equal(galeria[0].eventType, "Treinos");
+
+  assert.equal(Array.isArray(apoiadores), true);
+  assert.equal(apoiadores.length, 10);
+  assert.equal(apoiadores[0].name, "Marcela Amaral");
+
+  assert.ok(institucional.contactStatus, "contactStatus should exist");
+  assert.ok(institucional.aboutContent, "aboutContent should exist");
+  assert.ok(institucional.homeContent, "homeContent should exist");
 });

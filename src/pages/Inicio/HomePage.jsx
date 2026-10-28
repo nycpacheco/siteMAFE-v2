@@ -16,15 +16,12 @@ import {
   DialogDescription,
   DialogTitle,
 } from "@/components/ui/Dialog/Dialog";
-import {
-  contactStatus,
-  galleryItems,
-  homeContent,
-  supporters,
-} from "@/lib/site-content";
+
+import { useSiteContent } from "@/hooks/useSiteContent";
 import styles from "./HomePage.module.css";
 
 export function HomePage() {
+  const { contactStatus, galleryItems, homeContent, supporters } = useSiteContent();
   const [momentsRef, momentsApi] = useEmblaCarousel({ loop: true });
   const [supportersRef, supportersApi] = useEmblaCarousel({ loop: true });
   const [moment, setMoment] = useState(0);
