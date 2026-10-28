@@ -4,6 +4,19 @@ import portraitImage from "@/assets/mafe-retrato-equipe.jpg";
 import groupImage from "@/assets/mafe-treino-grupo.jpg";
 import serveImage from "@/assets/mafe-treino-saque.jpg";
 
+export const assetMap = {
+  "apoiador-marcela-amaral.jpg": supporterLogo,
+  "mafe-alongamento.jpg": warmupImage,
+  "mafe-retrato-equipe.jpg": portraitImage,
+  "mafe-treino-grupo.jpg": groupImage,
+  "mafe-treino-saque.jpg": serveImage,
+};
+
+export function resolveAssetUrl(assetKeyOrUrl) {
+  if (!assetKeyOrUrl) return "";
+  return assetMap[assetKeyOrUrl] || assetKeyOrUrl;
+}
+
 export const galleryItems = [
   {
     id: 1,
@@ -72,7 +85,6 @@ export const aboutContent = {
   participants: "cerca de 60 pessoas entre 45 e 75 anos",
 };
 
-/** Exemplo repetido até a coordenação enviar os apoiadores reais. */
 export const supporters = Array.from({ length: 10 }, (_, i) => ({
   id: i + 1,
   name: "Marcela Amaral",
@@ -82,11 +94,18 @@ export const supporters = Array.from({ length: 10 }, (_, i) => ({
   logo: supporterLogo,
 }));
 
-/** Contacts transcribed from the latest user-supplied prototype. */
 export const homeContent = {
   footerPhone: "(11) 90243-9028",
   whatsappUrl: "https://wa.me/5511998732849",
   facebookUrl: "https://www.facebook.com/mafegrupo",
   caption:
     "teste para ver se dá para enxergar as informações presentes além disso para testar se ele se adapta sozinho a parte branca",
+};
+
+export const fallbackSiteContent = {
+  contactStatus,
+  aboutContent,
+  homeContent,
+  galleryItems,
+  supporters,
 };
