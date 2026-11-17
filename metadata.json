@@ -1,0 +1,6 @@
+{
+  "name": "Maturidade Feliz (MAFE)",
+  "description": "Equipe de voleibol adaptado Maturidade Feliz em Mairiporã-SP. Momentos, história, galeria de fotos e apoiadores.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

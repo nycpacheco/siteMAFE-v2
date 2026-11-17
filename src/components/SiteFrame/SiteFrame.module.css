@@ -1,0 +1,457 @@
+.siteWrapper {
+  min-height: 100dvh;
+  background-color: var(--background);
+  color: var(--foreground);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 9rem;
+}
+
+@media (min-width: 640px) {
+  .siteWrapper {
+    padding-bottom: 0;
+  }
+}
+
+.skipLink {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 60;
+  transform: translateY(-6rem);
+  background-color: var(--action);
+  color: var(--action-foreground);
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+  outline: 4px solid var(--ring);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  border-bottom: 4px solid var(--primary);
+  background-color: var(--card);
+}
+
+.headerContainer {
+  margin: 0 auto;
+  display: grid;
+  min-height: 5rem;
+  max-width: 80rem;
+  grid-template-columns: minmax(0, 1fr) auto auto auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .headerContainer {
+    gap: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .headerContainer {
+    min-height: 6rem;
+    grid-template-columns: minmax(0, 1fr) auto auto auto auto;
+  }
+}
+
+.brandLink {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 0.375rem;
+}
+
+@media (min-width: 640px) {
+  .brandLink {
+    gap: 1rem;
+  }
+}
+
+.brandLink:focus-visible {
+  outline: 4px solid var(--ring);
+}
+
+.brandLogoBox {
+  display: flex;
+  height: 3.5rem;
+  width: 2.5rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  background-color: var(--logo-surface);
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .brandLogoBox {
+    height: 5rem;
+    width: 4rem;
+  }
+}
+
+.brandLogoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brandText {
+  min-width: 0;
+}
+
+.brandSubtitle {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.5625rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--primary);
+}
+
+@media (min-width: 640px) {
+  .brandSubtitle {
+    font-size: 0.875rem;
+  }
+}
+
+.brandTitle {
+  display: block;
+  word-break: break-words;
+  font-size: 0.75rem;
+  font-weight: 900;
+  line-height: 1.1;
+  font-family: var(--font-display);
+}
+
+@media (min-width: 640px) {
+  .brandTitle {
+    font-size: 1.25rem;
+  }
+}
+
+.brandHighlight {
+  color: var(--primary);
+}
+
+.brandDesktopOnly {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .brandDesktopOnly {
+    display: inline;
+  }
+}
+
+.navDesktop {
+  display: none;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+@media (min-width: 1280px) {
+  .navDesktop {
+    display: flex;
+  }
+}
+
+.navLink {
+  display: flex;
+  min-height: 3rem;
+  align-items: center;
+  border-radius: 0.375rem;
+  padding: 0 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--foreground);
+  transition: background-color 0.15s ease;
+}
+
+.navLink:hover {
+  background-color: var(--secondary);
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.navLinkActive {
+  font-weight: 900;
+  background-color: var(--secondary);
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+}
+
+.desktopParticipate {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .desktopParticipate {
+    display: inline-flex;
+  }
+}
+
+.mobileMenuBtn {
+  display: inline-flex;
+}
+
+@media (min-width: 1280px) {
+  .mobileMenuBtn {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  display: grid;
+  gap: 0.5rem;
+  border-bottom: 2px solid var(--primary);
+  background-color: var(--card);
+  padding: 0.75rem 1.25rem;
+  box-shadow: 4px 4px 0 var(--border);
+  z-index: 45;
+}
+
+@media (min-width: 1280px) {
+  .mobileMenu {
+    display: none;
+  }
+}
+
+.main {
+  flex: 1 0 auto;
+  outline: none;
+}
+
+.footer {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 30;
+  border-top: 4px solid var(--primary);
+  background-color: var(--footer);
+  color: var(--footer-foreground);
+}
+
+@media (min-width: 640px) {
+  .footer {
+    position: static;
+  }
+}
+
+.footerContainer {
+  margin: 0 auto;
+  display: grid;
+  max-width: 80rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 0.75rem;
+  row-gap: 0.25rem;
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .footerContainer {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footerContainer {
+    grid-template-columns: auto auto minmax(0, 1fr) auto;
+    column-gap: 1.5rem;
+  }
+}
+
+.footerLink {
+  display: flex;
+  min-height: 1.5rem;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (min-width: 640px) {
+  .footerLink {
+    min-height: 2.75rem;
+  }
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.footerLinkCol1 {
+  grid-column-start: 1;
+}
+
+@media (min-width: 1280px) {
+  .footerLinkCol1 {
+    grid-column: auto;
+  }
+}
+
+.footerNote {
+  grid-column: span 2;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+
+@media (min-width: 640px) {
+  .footerNote {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footerNote {
+    grid-column: span 1;
+    margin-top: 0;
+  }
+}
+
+.footerSocials {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 1280px) {
+  .footerSocials {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+.socialBtnWhatsapp {
+  background-color: var(--social-whatsapp) !important;
+  color: #ffffff !important;
+  border-radius: 9999px !important;
+}
+
+.socialBtnWhatsapp:hover {
+  opacity: 0.85;
+}
+
+.socialBtnFacebook {
+  background-color: var(--social-facebook) !important;
+  color: #ffffff !important;
+  border-radius: 9999px !important;
+}
+
+.socialBtnFacebook:hover {
+  opacity: 0.85;
+}
+
+.socialBtnInstagram {
+  background-color: var(--social-instagram) !important;
+  color: #ffffff !important;
+  border-radius: 9999px !important;
+}
+
+.socialBtnInstagram:disabled {
+  opacity: 1 !important;
+  cursor: not-allowed;
+}
+
+/* Container do menu mobile (caso precise garantir o fundo e espaçamento) */
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--card);
+  border-bottom: 3px solid var(--border);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Links de navegação do menu mobile */
+.mobileNavLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.5rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  border: 2px solid var(--border);
+  background-color: var(--card);
+  color: var(--foreground);
+  box-shadow: 2px 2px 0 var(--border);
+  box-sizing: border-box;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.mobileNavLink:hover {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+/* Link ativo na aba atual */
+.mobileNavLinkActive {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  font-weight: 800;
+}
+
+/* Botão de participar no menu mobile */
+.mobileParticipateBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.5rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1.125rem;
+  font-weight: 800;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  border: 2px solid var(--border);
+  background-color: var(--action);
+  color: var(--action-foreground);
+  box-shadow: 2px 2px 0 var(--border);
+  box-sizing: border-box;
+  transition: background-color 0.15s ease;
+}
+
+.mobileParticipateBtn:hover {
+  background-color: var(--action-hover);
+  color: var(--action-hover-foreground);
+}
