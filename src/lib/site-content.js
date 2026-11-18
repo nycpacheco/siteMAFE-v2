@@ -1,6 +1,6 @@
 export const contactStatus = {
-  whatsapp: "(11) 99873-2849",
-  email: "mafe@gmail.com",
+  whatsapp: "(11) 95629-4156",
+  email: "maturidadef@gmail.com",
   facebook: "mafegrupo",
 };
 
@@ -10,7 +10,7 @@ export const aboutStaticInfo = {
 };
 
 export const homeContent = {
-  footerPhone: "(11) 90243-9028",
-  whatsappUrl: "https://wa.me/5511998732849",
+  footerPhone: "(11) 95629-4156",
+  whatsappUrl: "https://wa.me/5511956294156",
   facebookUrl: "https://www.facebook.com/mafegrupo",
 };

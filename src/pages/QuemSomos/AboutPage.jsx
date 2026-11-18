@@ -40,7 +40,7 @@ export function AboutPage() {
           icon: CalendarHeart,
           value: `Desde ${stats.ano_fundacao}`,
           label: `${yearsActive} ${
-            yearsActive === 1 ? "ano de atuação" : "anos de atuação"
+            yearsActive === 1 ? "ano de atuaçãossss" : "anos de atuaçãssss o"
           }`,
         },
         {
@@ -78,39 +78,19 @@ export function AboutPage() {
                     social{" "}
                   </>
                 ) : (
-                  <>O grupo social </>
+                  <>A “Maturidade Feliz”, </>
                 )}
                 <strong className={styles.textPrimary}>
-                  MAFE — Maturidade Feliz
+                  também conhecida como MAFE
                 </strong>{" "}
-                desenvolve, na cidade de {aboutStaticInfo.city}, aulas de vôlei
-                adaptado para pessoas idosas por meio de um programa da
-                Prefeitura Municipal chamado{" "}
-                <strong>{aboutStaticInfo.program}</strong>, buscando aumentar a
-                qualidade de vida da população local.
+                , é uma equipe formada por amigos de várias cidades e idades (a partir de 44 anos), homens e mulheres, que amam jogar Voleibol Adaptado para a terceira idade.{" "}
+                <strong>Jogamos aos sábados na Escola Estadual Professora Nide Zaim Cardoso, na cidade de Mairiporã /SP </strong> e fazemos parte do Programa Escola da Família (PAF), coordenado pelo professor articulador Valdemir Bueno da Silva.
               </p>
               <p className={styles.cardText}>
-                {stats ? (
-                  <>
-                    O projeto reúne{" "}
-                    <strong className={styles.textPrimary}>
-                      {stats.quantidade_participantes} participantes
-                    </strong>{" "}
-                    em encontros semanais e já soma{" "}
-                    <strong className={styles.textPrimary}>
-                      {stats.quantidade_torneios} torneios
-                    </strong>
-                    , ampliando não só a saúde física, mas também a socialização
-                    e o bem-estar emocional de cada integrante.
-                  </>
-                ) : (
-                  <>
-                    Os encontros semanais ampliam não só a saúde física, mas
-                    também a socialização e o bem-estar emocional dos
-                    participantes.
-                  </>
-                )}
+                <strong className={styles.textPrimary}>Atualmente jogamos aos sábados das 09h00 às 13h00</strong>, mas cada atleta pode chegar e ir embora no horário que quiser e comparecer também no sábado que puder. <strong>Além de jogar, em algumas ocasiões também realizamos conversas, reflexões e dinâmicas sobre empatia, saúde, tolerância, amizade, respeito e outros temas.</strong>
               </p>
+              <p className={styles.cardText}>Algumas vezes, treinamos em outras quadras de outros lugares, inclusive quadras de areia e <strong>também participamos de amistosos e competições</strong>. Ao longo do ano, colaboramos com o Programa na realização das festas da Páscoa, do dia das crianças e do Natal.</p>
+              <p className={styles.cardText}><strong className={styles.textPrimary}>Nos encontramos aos sábados para jogar, conversar, rir, aprender, comemorar, nos apoiar, ou seja, viver com mais saúde física, mental e  vivendo horas felizes.</strong></p>
             </div>
             <img
               src={groupImage}
